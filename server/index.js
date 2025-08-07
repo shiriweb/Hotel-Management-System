@@ -13,7 +13,6 @@ import authRoutes from "./src/routes/User.js";
 import postRoutes from "./src/routes/Post.js";
 import categoryRoutes from "./src/routes/Category.js";
 
-// Database connection - now environment variables are available
 connectToDB();
 const app = express();
 
