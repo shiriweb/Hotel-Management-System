@@ -5,9 +5,9 @@ import AdminDetails from "./AdminDetails";
 const Dashboard = () => {
   return (
     <div className="min-h-screen bg-[#f5f5f5]">
-      <div className="pt-24 max-w-5xl mx-auto px-4">
+      <div className="flex flex-row">
         <Navbar />
-        <div className="mt-8">
+        <div className="flex-1 p-6">
           <AdminDetails />
         </div>
       </div>

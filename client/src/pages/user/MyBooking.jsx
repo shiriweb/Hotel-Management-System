@@ -1,9 +1,14 @@
-import React from 'react'
-
+import React from "react";
+import Navbar from "./Navbar";
 const MyBooking = () => {
   return (
-    <div>Mybooking</div>
-  )
-}
+    <div>
+      <Navbar />
+      <div>
+        <h1>My Bookings</h1>
+      </div>
+    </div>
+  );
+};
 
-export default MyBooking
+export default MyBooking;

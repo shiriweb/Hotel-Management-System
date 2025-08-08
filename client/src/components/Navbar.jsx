@@ -20,7 +20,7 @@ const Navbar = () => {
 
   const handleRedirect = () => {
     if (auth?.user?.role === "admin") {
-      navigate("/admin/details");
+      navigate("/admin");
     } else {
       navigate("/user");
     }
@@ -39,15 +39,23 @@ const Navbar = () => {
     <nav className="bg-[#f5eee6] shadow-md px-6 py-4 flex justify-between items-center">
       {/* Left: Logo */}
       <div className="text-xl font-bold text-green-600">
-        MyLogo
+        <Link to="/">MyLogo</Link>
       </div>
 
       {/* Center: Navigation Links */}
       <ul className="flex space-x-6 text-gray-700 font-medium">
-        <li><a href="#" className="hover:text-green-600">Home</a></li>
-        <li><a href="#" className="hover:text-green-600">Hotel</a></li>
-        <li><a href="#" className="hover:text-green-600">Experience</a></li>
-        <li><a href="#" className="hover:text-green-600">About</a></li>
+        <li>
+          <Link to="/" className="hover:text-green-600">Home</Link>
+        </li>
+        <li>
+          <Link to="/hotels" className="hover:text-green-600">Hotel</Link>
+        </li>
+        <li>
+          <Link to="/experience" className="hover:text-green-600">Experience</Link>
+        </li>
+        <li>
+          <Link to="/about" className="hover:text-green-600">About</Link>
+        </li>
       </ul>
 
       {/* Right: User Icon + Dropdown */}
@@ -80,7 +88,7 @@ const Navbar = () => {
                   className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
                   onClick={closeDropdown}
                 >
-                  <Link to={"/login"}>Sign In</Link>
+                  <Link to="/login">Sign In</Link>
                 </li>
               )}
             </ul>

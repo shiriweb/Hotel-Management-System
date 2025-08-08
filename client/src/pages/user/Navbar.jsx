@@ -18,17 +18,17 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className="bg-white border-b border-gray-200">
-      <nav className="max-w-4xl mx-auto flex gap-4 px-4 py-3">
+    <div className="bg-gray-800 text-white shadow-md p-4 w-64 h-screen">
+      <nav className="flex flex-col space-y-2">
         {navbarMenu.map((item) => {
           return (
             <Link
               key={item.id}
               to={item.link}
-              className="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-green-50 hover:text-green-700 transition-colors duration-200"
+              className="flex items-center gap-3 text-gray-300 hover:text-white hover:bg-gray-700 px-3 py-2 rounded transition"
             >
               <span className="text-lg">{item.icon}</span>
-              <span>{item.name}</span>
+              <span className="text-sm font-medium">{item.name}</span>
             </Link>
           );
         })}
